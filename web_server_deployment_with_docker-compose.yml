@@ -1,5 +1,5 @@
 ---
-- name: 
+- name:
   hosts: agent
   become: yes
 
@@ -58,14 +58,14 @@
       file:
         path: /var/www
         state: directory
-        owner: www
-        group: www
+        # owner: www
+        # group: www
         mode: 0775
 
 
     - name: install git | git
-      apt:  name=nano state=latest
-      update_cache: yes
+      apt:  name=git state=latest
+      # update_cache: yes
 
 
     - name: git clone | clone
