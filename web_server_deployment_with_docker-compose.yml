@@ -69,4 +69,10 @@
       ansible.builtin.git:
         repo: 'https://gitlab.com/Georg-get/coffe.git'
         dest: /var/www
+        
+    - name: docker-compose up | docker-compose up -d
+      shell:
+        cmd: "docker-compose up -d"
+        chdir: /var/www
+
 
